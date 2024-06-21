@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(judulArtikel)}&url=${encodeURIComponent(urlArtikel)}`;
             } else if (platform === 'whatsapp') {
                 shareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(judulArtikel + ' ' + urlArtikel)}`;
+            } else if (platform === 'linkedin') {
+                shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(urlArtikel)}&title=${encodeURIComponent(judulArtikel)}&summary=&source=`;
             }
 
             if (shareUrl !== '') {
